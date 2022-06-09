@@ -1,14 +1,14 @@
 {
   "name": "@scope/package-name",
   "version": "0.0.0",
-  "description": "Some description",
+  "description": "A modern TypeScript package template",
   "license": "MIT",
   "keywords": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devgioele/modern-typescript-package.git"
   },
-  "author": "some-author",
+  "author": "devgioele",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
