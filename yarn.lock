@@ -807,8 +807,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@scope/package-name@workspace:."
   dependencies:
-    "@swc/core": ^1.2.197
-    "@swc/jest": ^0.2.21
+    "@swc/core": 1.2.197
+    "@swc/jest": 0.2.21
     "@types/geojson": ^7946.0.8
     "@types/jest": 27.5.1
     "@types/node": 17.0.36
@@ -817,7 +817,7 @@ __metadata:
     eslint-config-prettier: 8.5.0
     eslint-plugin-github: 4.3.6
     eslint-plugin-jest: 26.4.5
-    eslint-plugin-prettier: ^4.0.0
+    eslint-plugin-prettier: 4.0.0
     jest: 28.1.0
     prettier: 2.6.2
     rimraf: 3.0.2
@@ -941,7 +941,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core@npm:^1.2.197":
+"@swc/core@npm:1.2.197":
   version: 1.2.197
   resolution: "@swc/core@npm:1.2.197"
   dependencies:
@@ -991,7 +991,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/jest@npm:^0.2.21":
+"@swc/jest@npm:0.2.21":
   version: 0.2.21
   resolution: "@swc/jest@npm:0.2.21"
   dependencies:
@@ -2445,7 +2445,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^4.0.0":
+"eslint-plugin-prettier@npm:4.0.0, eslint-plugin-prettier@npm:^4.0.0":
   version: 4.0.0
   resolution: "eslint-plugin-prettier@npm:4.0.0"
   dependencies:
