@@ -8,5 +8,5 @@ type HelloWorldOptions = Partial<{
  * @param name The name to greet.
  * @returns The greeting.
  */
-export const helloWorld = ({ name }: HelloWorldOptions): string =>
-  `Hello, ${name || 'World'}!`
+export const helloWorld = (options?: HelloWorldOptions): string =>
+  `Hello, ${options?.name || 'World'}!`
