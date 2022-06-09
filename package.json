@@ -19,12 +19,13 @@
     "lint": "eslint '**/*.ts' --cache --fix",
     "test": "rimraf __tests__/out && jest",
     "build": "rimraf dist && yarn build:types & yarn build:cjs & yarn build:esm &",
-    "build:cjs": "node ./esbuild.cjs.js",
-    "build:esm": "node ./esbuild.esm.js",
+    "build:cjs": "swc ./src -d dist/cjs -C module.type=commonjs",
+    "build:esm": "swc ./src -d dist/esm -C module.type=es6",
     "build:types": "tsc -p tsconfig.types.json",
     "prepack": "yarn build"
   },
   "devDependencies": {
+    "@swc/cli": "0.1.57",
     "@swc/core": "1.2.197",
     "@swc/jest": "0.2.21",
     "@types/jest": "28.1.1",
