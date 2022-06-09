@@ -1,0 +1,47 @@
+{
+  "name": "@scope/package-name",
+  "version": "0.0.0",
+  "description": "Some description",
+  "license": "MIT",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devgioele/modern-typescript-package.git"
+  },
+  "author": "some-author",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint '**/*.ts' --cache --fix",
+    "test": "rimraf __tests__/out && jest",
+    "build": "rimraf dist && yarn build:types & yarn build:cjs & yarn build:esm &",
+    "build:cjs": "node ./esbuild.cjs.js",
+    "build:esm": "node ./esbuild.esm.js",
+    "build:types": "tsc -p tsconfig.types.json",
+    "prepack": "yarn build"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.2.197",
+    "@swc/jest": "^0.2.21",
+    "@types/jest": "27.5.1",
+    "@types/node": "17.0.36",
+    "esbuild": "0.14.43",
+    "eslint": "8.17.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-github": "4.3.6",
+    "eslint-plugin-jest": "26.4.5",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "28.1.0",
+    "prettier": "2.6.2",
+    "rimraf": "3.0.2",
+    "typescript": "4.7.2"
+  },
+  "dependencies": {
+    "@types/geojson": "^7946.0.8"
+  },
+  "packageManager": "yarn@3.2.1"
+}

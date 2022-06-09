@@ -1,0 +1,41 @@
+name: Verify code quality
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      # There might be a new version to be published
+      - package.json
+      # Tests changed and may pass now
+      - __tests__/**/*
+      # Source code changed and tests may pass now
+      - src/**/*
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: corepack enable
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - name: Restore yarn cache
+        uses: actions/cache@v3
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: yarn-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+          restore-keys: |
+            yarn-cache-folder-
+      - name: Fetch and link dependencies
+        run: yarn
+      - name: Test
+        run: yarn test
