@@ -465,7 +465,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/core@npm:^28.1.0, @jest/core@npm:^28.1.1":
+"@jest/core@npm:^28.1.1":
   version: 28.1.1
   resolution: "@jest/core@npm:28.1.1"
   dependencies:
@@ -810,7 +810,7 @@ __metadata:
     "@swc/core": 1.2.197
     "@swc/jest": 0.2.21
     "@types/geojson": ^7946.0.8
-    "@types/jest": 27.5.1
+    "@types/jest": 27.5.2
     "@types/node": 17.0.36
     esbuild: 0.14.43
     eslint: 8.17.0
@@ -818,7 +818,7 @@ __metadata:
     eslint-plugin-github: 4.3.6
     eslint-plugin-jest: 26.4.5
     eslint-plugin-prettier: 4.0.0
-    jest: 28.1.0
+    jest: 28.1.1
     prettier: 2.6.2
     rimraf: 3.0.2
     typescript: 4.7.2
@@ -1091,13 +1091,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:27.5.1":
-  version: 27.5.1
-  resolution: "@types/jest@npm:27.5.1"
+"@types/jest@npm:27.5.2":
+  version: 27.5.2
+  resolution: "@types/jest@npm:27.5.2"
   dependencies:
     jest-matcher-utils: ^27.0.0
     pretty-format: ^27.0.0
-  checksum: be20e39f7aaf17179109c0060d0a0489cec2034d4e2e28a631284c7ecd13c5ae52f62697a33a0e89b03b6cfe54e9d5e8c2bd387ab2bd90d6071d68c63b86d1e3
+  checksum: 7e11c6826aa429ad990dc262e4e4b54aa36573287fddf15773e4137f07d11d3105f0dd9f1baff73252160a057df23f5529bb83b1bf83cd3f45f9460a5ca5c22e
   languageName: node
   linkType: hard
 
@@ -3449,7 +3449,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-cli@npm:^28.1.0":
+"jest-cli@npm:^28.1.1":
   version: 28.1.1
   resolution: "jest-cli@npm:28.1.1"
   dependencies:
@@ -3863,13 +3863,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:28.1.0":
-  version: 28.1.0
-  resolution: "jest@npm:28.1.0"
+"jest@npm:28.1.1":
+  version: 28.1.1
+  resolution: "jest@npm:28.1.1"
   dependencies:
-    "@jest/core": ^28.1.0
+    "@jest/core": ^28.1.1
+    "@jest/types": ^28.1.1
     import-local: ^3.0.2
-    jest-cli: ^28.1.0
+    jest-cli: ^28.1.1
   peerDependencies:
     node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
   peerDependenciesMeta:
@@ -3877,7 +3878,7 @@ __metadata:
       optional: true
   bin:
     jest: bin/jest.js
-  checksum: f025164c408cf5ddb6e74dac1e8cbaf94c1c31dd1c67aba4ceee5989b2d8a77886db8ed1fb88853b45cf194b14cd802b454bbbe6b278a1e2140250297dc100d3
+  checksum: 398a143d9ef1a78e2ba516a09b6343cb926bf20e29ad400141dd3bd57e964195b82817a60eb8745ba9006fcd7c028ceda5108e3c426fa4e29877f28d87cf88a3
   languageName: node
   linkType: hard
 
